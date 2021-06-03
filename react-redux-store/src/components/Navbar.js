@@ -3,6 +3,7 @@ import AboutUs from './AboutUs';
 import Home from './Home'
 import ShoppingCart from './ShoppingCart';
 import Products from './Products';
+import SingleProduct from './SingleProduct';
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 
 export default function Navbar() {
@@ -27,6 +28,9 @@ export default function Navbar() {
                 </Route>
                 <Route exact path="/products">
                     <Products />
+                </Route>
+                <Route path="/products/:id">
+                    <SingleProduct />
                 </Route>
                 <Route exact path="/*">
                     <Redirect to="/"/>
