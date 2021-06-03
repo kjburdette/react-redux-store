@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function JeweleryCard(props) {
-    const {image, title} = props.singleitem
+export default function ProductCard(props) {
+    const {image,title} = props.product
     return (
         <div>
             <img src={image}/>
             <h2>{title}</h2>
+            <button>View More</button>
         </div>
     )
 }

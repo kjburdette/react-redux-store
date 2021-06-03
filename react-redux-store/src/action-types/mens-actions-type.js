@@ -1,1 +1,0 @@
-export const SET_MENS = "SET_MENS"
