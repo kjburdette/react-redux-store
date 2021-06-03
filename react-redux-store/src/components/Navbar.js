@@ -5,6 +5,8 @@ import Jewelery from './Jewelery';
 import Electronics from './Electronics';
 import AboutUs from './AboutUs';
 import Home from './Home'
+import ShoppingCart from './ShoppingCart';
+import Product from './Product';
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 
 export default function Navbar() {
@@ -17,6 +19,7 @@ export default function Navbar() {
                     <Link to="/womensclothing">Women's Clothing</Link>
                     <Link to="/jewelery">Jewelery</Link>
                     <Link to="/electronics">Electronics</Link>
+                    <Link to="/shoppingcart">Shopping Cart</Link>
                     <Link to="/aboutus">About Us</Link>
                 </nav>
                 <Switch>
@@ -35,8 +38,14 @@ export default function Navbar() {
                 <Route exact path="/electronics">
                     <Electronics />
                 </Route>
+                <Route exact path="/shoppingcart">
+                    <ShoppingCart />
+                </Route>
                 <Route exact path="/aboutus">
                     <AboutUs />
+                </Route>
+                <Route exact path="/product">
+                    <Product />
                 </Route>
                 <Route exact path="/*">
                     <Redirect to="/"/>
