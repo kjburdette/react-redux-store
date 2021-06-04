@@ -5,17 +5,22 @@ import ShoppingCart from './ShoppingCart';
 import Products from './Products';
 import SingleProduct from './SingleProduct';
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
 
-export default function Navbar() {
+export default function Navig() {
     return (
-        <div className="Navbar">
+        <div>
             <Router>
-                <nav>
-                    <Link to="/">Home</Link>
-                    <Link to="/products">Products</Link>
-                    <Link to="/shoppingcart">Shopping Cart</Link>
-                    <Link to="/aboutus">About Us</Link>
-                </nav>
+                <Navbar bg="dark" variant="dark">
+                    <Navbar.Brand>The Kitchen Sink</Navbar.Brand>
+                    <Nav className="mr-auto">
+                    <Link to="/" className="navLink">Home</Link>
+                    <Link to="/products" className="navLink">Products</Link>
+                    <Link to="shoppingcart" className="navLink">Shopping Cart</Link>
+                    <Link to="aboutus" className="navLink">About Us</Link>
+                    </Nav>
+                </Navbar>
                 <Switch>
                 <Route exact path="/">
                     <Home />

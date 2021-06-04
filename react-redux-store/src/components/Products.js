@@ -20,13 +20,15 @@ export default function Products() {
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>The Goods</h1>
-            {products.map((product) =>{
-                return(
-                    <ProductCard product={product} key={product.id}/>
-                )
-            })}
+            <div className="grid">
+                {products.map((product) =>{
+                    return(
+                        <ProductCard product={product} key={product.id}/>
+                    )
+                })} 
+            </div>
         </div>
     )
 }

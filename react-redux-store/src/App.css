@@ -1,3 +1,45 @@
 .App {
   text-align: center;
+  font-family: "Mate SC", serif;
+  background-color: antiquewhite;
+}
+
+.grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  width: 100% !important;
+}
+
+.landing {
+  background: url(../src/assets/landing.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navLink {
+  color: white;
+  padding: 10px;
+  font-family: "Mate SC", serif;
+}
+
+.AboutContainer {
+  display: grid;
+  place-items: start center;
+}
+
+h1 {
+  font-family: "Mate SC", serif;
+}
+
+.Carousel {
+  height: 300px;
+  width: 100vw;
+}
+
+div.card {
+  border: 1px black solid;
+  padding: 5px;
 }

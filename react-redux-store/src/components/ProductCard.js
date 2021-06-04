@@ -3,18 +3,24 @@ import { addProductToCart } from '../actions/cartActions';
 import { useDispatch } from "react-redux";
 import { setItem } from '../actions/single-item-action';
 import { Link } from "react-router-dom";
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 
 export default function ProductCard(props) {
     const {image,title} = props.product
     const dispatch = useDispatch()
     return (
         <div>
-            <img src={image} height="200" width="200" alt=""/>
-            <h2>{title}</h2>
-            <Link to="/products/:id">
-            <button onClick={() => setItem(dispatch, props.product)}>View More Details</button>
-            </Link>
-            <button onClick={() => addProductToCart(dispatch, props.product)}>Add to Cart</button>
+            <Card style={{ width: '15rem', margin: '10px' }}>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Link to="/products/:id">
+                    <Button variant="primary" style={{ margin: '10px' }} onClick={() => setItem(dispatch, props.product)}>View More Details</Button>
+                    </Link>
+                    <Button variant="primary" style={{ margin: '10px' }} onClick={() => addProductToCart(dispatch, props.product)}>Add to Cart</Button>
+                </Card.Body>
+                </Card>
         </div>
     )
 }
